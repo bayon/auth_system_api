@@ -9,7 +9,7 @@ app.use(express.json());
 //check process.env 
 require('dotenv').config({path:'.env'})
 app.use(cors());
-//example using the token to protect a route 
+//example using the token to protect a route  !!!!!!!!
 app.get('/api/users/profile', verifyToken, (req,res) => {
     //console.log(req.user)//because it got added in the 'verifyToken' middleware...
     //res.send('This is the PROTECTED user profile')
