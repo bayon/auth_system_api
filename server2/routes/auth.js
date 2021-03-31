@@ -28,6 +28,14 @@ router.get('/', (req,res) => {
     res.send('auth route blank...')
     
 } )
+//endpoint is actually API_HOST/api/users/users 
+router.get('/users',async  (req,res) => {
+   // res.send('users data not implemented yet......')
+    const user = await User.find();
+    console.log('user:',user);
+    res.send(user)
+    
+} )
 
 router.post('/register',validate,  async (req,res) => {
     //check validation 
