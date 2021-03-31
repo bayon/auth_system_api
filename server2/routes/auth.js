@@ -37,16 +37,16 @@ router.get('/users',async  (req,res) => {
     
 } )
 
-router.get('/profile',async  (req,res) => {
-    // res.send('users data not implemented yet......')
-    //try sending in auth-token as a header to get used in the verifyToken middleware 
-    console.log('req.body:',req.body);
-    console.log('req.query:',req.query) 
-     const user = await User.find();
-     console.log('user:',user);
-     res.send(user)
+// router.get('/profile',async  (req,res) => {
+//     // res.send('users data not implemented yet......')
+//     //try sending in auth-token as a header to get used in the verifyToken middleware 
+//     console.log('req.body:',req.body);
+//     console.log('req.query:',req.query) 
+//      const user = await User.find();
+//      console.log('user:',user);
+//      res.send(user)
      
- } )
+//  } )
 
 router.post('/register',validate,  async (req,res) => {
     //check validation 
